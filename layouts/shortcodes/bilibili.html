@@ -1,0 +1,13 @@
+{{- $bvid := .Get 0 -}}
+{{- $page := .Get 1 | default "1" -}}
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe
+    src="https://player.bilibili.com/player.html?bvid={{ $bvid }}&page={{ $page }}"
+    scrolling="no"
+    frameborder="0"
+    allowfullscreen
+    style="position:absolute; top:0; left:0; width:100%; height:100%;">
+  </iframe>
+</div>
+

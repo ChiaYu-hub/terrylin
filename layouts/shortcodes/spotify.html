@@ -1,0 +1,27 @@
+{{- $url := .Get 0 -}}
+{{- $height := .Get 1 -}}
+
+{{- /* 自動將 open.spotify.com 換成 open.spotify.com/embed */ -}}
+{{- $embedUrl := replace $url "open.spotify.com/" "open.spotify.com/embed/" -}}
+
+{{- /* 根據內容自動設定預設高度：如果是清單就高一點，單曲就矮一點 */ -}}
+{{- if not $height -}}
+    {{- if in $url "playlist" -}}
+        {{- $height = "380" -}}
+    {{- else -}}
+        {{- $height = "152" -}}
+    {{- end -}}
+{{- end -}}
+
+<div class="spotify-container my-6">
+  <iframe 
+    style="border-radius:12px" 
+    src="{{ $embedUrl }}" 
+    width="100%" 
+    height="{{ $height }}" 
+    frameBorder="0" 
+    allowfullscreen="" 
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+    loading="lazy">
+  </iframe>
+</div>

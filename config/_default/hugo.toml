@@ -1,0 +1,70 @@
+baseURL = 'https://ChiaYu-hub.github.io/terrylin'
+languageCode = "zh-tw"
+defaultContentLanguage='zh-tw'
+title = 'About TerryLin'
+theme = "blowfish"
+hasCJKLanguage = true  # 必加！對中文寫作者非常有幫助
+enableRobotsTXT = true
+summaryLength = 0
+
+buildDrafts = false
+buildFuture = false
+enableEmoji = true
+
+[pagination]
+  pagerSize = 100
+
+[imaging]
+  anchor = 'Center'
+
+[sitemap]
+  changefreq = 'daily'
+  filename = 'sitemap.xml'
+  priority = 0.5
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[related]
+  threshold = 0
+  toLower = false
+
+    [[related.indices]]
+        name = "tags"
+        weight = 100
+
+    [[related.indices]]
+        name = "categories"
+        weight = 100
+
+    [[related.indices]]
+        name = "series"
+        weight = 50
+
+    [[related.indices]]
+        name = "authors"
+        weight = 20
+
+    [[related.indices]]
+        name = "date"
+        weight = 10
+
+    [[related.indices]]
+      applyFilter = false
+      name = 'fragmentrefs'
+      type = 'fragments'
+      weight = 10
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+  #author = "authors"
+  #series = "series"
+
+# 開啟留言功能
+[comments]
+ enabled = true
+ engine = "disqus"
+
+[comments.disqus]
+  shortname = "CYChen"

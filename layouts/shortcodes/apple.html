@@ -1,0 +1,17 @@
+{{- $url := .Get 0 -}}
+{{- $height := .Get 1 | default "175" -}}
+
+{{- /* 將標準網址轉換為嵌入網址 */ -}}
+{{- /* 例如把 podcasts.apple.com/... 換成 embed.podcasts.apple.com/... */ -}}
+{{- $embedUrl := replace $url "podcasts.apple.com" "embed.podcasts.apple.com" -}}
+
+<div class="apple-podcast-container my-6">
+  <iframe 
+    allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" 
+    frameborder="0" 
+    height="{{ $height }}" 
+    style="width:100%; max-width:100%; overflow:hidden; border-radius:12px; background:transparent;" 
+    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" 
+    src="{{ $embedUrl }}">
+  </iframe>
+</div>
