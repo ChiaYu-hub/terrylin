@@ -1,8 +1,8 @@
 +++
 date = '2024-06-23T15:05:59+08:00'
-draft = true
+draft = false
 title = 'AmazingTalkerShow'
-categories=['2024']
+year=['2024']
 tags=['專訪']
 +++
 

@@ -58,8 +58,7 @@ enableEmoji = true
 [taxonomies]
   category = 'categories'
   tag = 'tags'
-  #author = "authors"
-  #series = "series"
+  year='year'
 
 # 開啟留言功能
 [comments]

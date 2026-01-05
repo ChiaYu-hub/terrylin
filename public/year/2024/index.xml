@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2024 on About TerryLin</title>
-    <link>http://localhost:1313/terrylin/categories/2024/</link>
+    <link>http://localhost:1313/terrylin/year/2024/</link>
     <description>Recent content in 2024 on About TerryLin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <copyright>© 2025 TerryLin Fans Club 2.0</copyright>
-    <lastBuildDate>Sun, 23 Jun 2024 15:05:59 +0800</lastBuildDate><atom:link href="http://localhost:1313/terrylin/categories/2024/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2026 TerryLin Fans Club 2.0</copyright>
+    <lastBuildDate>Sun, 23 Jun 2024 15:05:59 +0800</lastBuildDate><atom:link href="http://localhost:1313/terrylin/year/2024/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>AmazingTalkerShow</title>
