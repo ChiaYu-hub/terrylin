@@ -1,0 +1,33 @@
+name: Deploy Hugo site to GitHub Pages
+
+#on:
+#  push:
+#    branches:
+#      - master  # 當你 push 到 master 時觸發
+on:
+  workflow_dispatch: # 手動
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4  # 步驟 1: 把你的程式碼抓下來
+        with:
+          submodules: true         # 確保抓到 Blowfish 主題
+          fetch-depth: 0
+
+      - name: Setup Hugo           # 步驟 2: 安裝 Hugo 軟體
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build                # 步驟 3: 執行編譯 (將 md 轉為 html)
+        run: hugo --minify
+
+      - name: Deploy               # 步驟 4: 把編譯好的結果推送到 public 分支
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # 這是自動生成, 每次執行都不同
+          publish_dir: ./public
+          publish_branch: public  
